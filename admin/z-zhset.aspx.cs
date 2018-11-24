@@ -11,7 +11,7 @@ using System.Web.UI.WebControls;
 using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 
-public partial class admin_zhset : System.Web.UI.Page
+public partial class admin_z_zhset : System.Web.UI.Page
 {
     public string titleback = string.Empty, keyciback = string.Empty, miaoshuback = string.Empty, wzhi = "", titlew = "";
     public string updateSQL = "update wz_jbxx set titlem='{0}',keyci='{1}',descs='{2}' where id=1";

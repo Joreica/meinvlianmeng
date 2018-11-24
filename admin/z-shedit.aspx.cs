@@ -12,7 +12,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.IO;
 
-public partial class kuangjia_shedit : System.Web.UI.Page
+public partial class admin_z_shedit : System.Web.UI.Page
 {
     public string titlew = "", Imgmc = "", Noval = "", didval = "", xidval = "", dming = "", tpxxr = "", ntits = "", wenjj = "";
     public int NoIntVal = 0, sid = 0;

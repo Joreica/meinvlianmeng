@@ -12,7 +12,7 @@ using System.Web.UI.WebControls.WebParts;
 using System.Xml.Linq;
 using System.IO;
 
-public partial class admin_shgl : System.Web.UI.Page
+public partial class admin_z_shlist : System.Web.UI.Page
 {
     public int Pagee = 1;
     public int CountPage = 1;
@@ -22,6 +22,7 @@ public partial class admin_shgl : System.Web.UI.Page
     public DataSet ds = new DataSet();
     public string Noval = "", zynr = "", sanme = "", tiaoj = "", tiao = "", time = "";
     public int NoIntVal = 0, sid = 0;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Request.QueryString["no"] != null)//商户id

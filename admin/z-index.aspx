@@ -88,7 +88,7 @@
                             </div>
                             <div class="actions">
                                 <ul class="actions-btn">
-                                     <li class="blue"><a href="chart.aspx" class="lsls">查看历史统计</a></li>
+                                     <li class="blue"><a href="z-chart.aspx" class="lsls">查看历史统计</a></li>
                                 </ul>
                             </div>
                             <%--统计图插件--%>
@@ -157,7 +157,7 @@ if (option && typeof option === "object") {
                             </div>
                             <div class="actions">
                                 <ul class="actions-btn">
-                                    <li class="purple"><a href="shjyb.aspx" class="lxlx" >查看全部排名</a></li>
+                                    <li class="purple"><a href="z-shjyb.aspx" class="lxlx" >查看全部排名</a></li>
                                 </ul>
                             </div>
                         </div>

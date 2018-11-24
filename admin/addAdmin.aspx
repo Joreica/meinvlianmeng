@@ -15,32 +15,32 @@
                     <div class="am-u-sm-12 am-u-md-9">
                         
                         <div class="am-form-group">
-                            <label for="user-name" class="am-u-sm-3 am-form-label">
+                            <label for="user-name" class="am-u-sm-3 am-form-label" style="width:15%; text-align:center;float:left;">
                                 用户名 / Name</label>
-                            <div class="am-u-sm-9">
+                            <div class="am-u-sm-9" style="width:75%;float:left;">
                                 <asp:TextBox ID="username" runat="server" placeholder="姓名 / Name"></asp:TextBox>
                                 <small>输入你的名字，让我们记住你。</small>
                             </div>
                         </div>
                         <div class="am-form-group">
-                            <label for="user-password" class="am-u-sm-3 am-form-label">
+                            <label for="user-password" class="am-u-sm-3 am-form-label"style="width:15%; text-align:center;float:left;">
                                 密码 / password</label>
-                            <div class="am-u-sm-9">
+                            <div class="am-u-sm-9"style="width:75%;float:left;">
                                 <asp:TextBox ID="userpassword" runat="server" placeholder="密码 / password"  TextMode="Password"></asp:TextBox>
                                 <small>输入密码不少于六个字符</small>
                             </div>
                         </div>
                         <div class="am-form-group">
-                            <label for="user-realname" class="am-u-sm-3 am-form-label">
+                            <label for="user-realname" class="am-u-sm-3 am-form-label"style="width:15%; text-align:center;float:left;">
                                 真实姓名</label>
-                            <div class="am-u-sm-9">
+                            <div class="am-u-sm-9"style="width:75%;float:left;">
                                 <asp:TextBox ID="userrealname" runat="server" placeholder="输入你的真实姓名"></asp:TextBox>
                             </div>
                         </div>
                         <div class="am-form-group">
-                            <label for="user-phone" class="am-u-sm-3 am-form-label">
+                            <label for="user-phone" class="am-u-sm-3 am-form-label"style="width:15%; text-align:center;float:left;">
                                 电话 / Telephone</label>
-                            <div class="am-u-sm-9">
+                            <div class="am-u-sm-9"style="width:75%;float:left;">
                                 <asp:TextBox ID="userphone" runat="server" placeholder="输入你的电话号码 / Telephone"></asp:TextBox>
                             </div>
                         </div>
