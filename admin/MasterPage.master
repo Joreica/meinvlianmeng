@@ -216,7 +216,7 @@
                         <ul class="tpl-left-nav-sub-menu">
                             <li><a href="addAdmin.aspx"><i class="am-icon-angle-right"></i><span>管理员添加</span>
                                 <i class="am-icon-star tpl-left-nav-content-ico am-fr am-margin-right"></i></a><a
-                                    href="adminList.aspx"><i class="am-icon-angle-right"></i><span>管理员列表</span></a>
+                                    href="listAdmin.aspx"><i class="am-icon-angle-right"></i><span>管理员列表</span></a>
                                     </li>
                         </ul>
                     </li>
