@@ -28,7 +28,7 @@
                         </div>--%>
                         <div class="am-u-sm-12 am-u-md-3"style="float:right;">
                             <div class="am-input-group am-input-group-sm">
-                                <input type="text" class="am-form-field">
+                                <input type="text" class="am-form-field"style="float:left; width:220px;height:20px;">
                                 <span class="am-input-group-btn">
             <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" type="button"></button>
           </span>
