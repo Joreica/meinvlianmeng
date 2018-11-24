@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="shlist.aspx.cs" Inherits="admin_shgl" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="zhset.aspx.cs" Inherits="admin_zhset" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>商户管理</title>
-    <meta name="description" content="这是一个 index 页面">
+    <meta name="description" >
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
@@ -21,6 +21,17 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/amazeui.min.js"></script>
     <script src="assets/js/app.js"></script>
+<style>
+    .JTable{border-style: none;border-color: inherit;border-width: 0px;width:1200px;height:auto;background-color:#cbcbcb; margin-top:-10px;}
+    .JTitle td{height:30px;background-color:#ffffff;color:#005BB0;font-size:11px; line-height:30px;font-weight:bold;}
+    .JTitle td strong{margin-left:10px;}
+    .JTr .LTd,.JTr .RTd{height:28px;background-color:#ffffff;line-height:28px;}
+    .LTd{width:145px;color:#005BB0;text-align:right;}
+    .LTd strong{margin-right:10px;}
+    .RTd{padding-left:10px; }
+    .Input_T{border:1px #c9c9c9 solid;font-size:9pt;height:18px;line-height:20px;margin-bottom: 0px;}img{ padding:0; border:0;}
+    .Button8{font-size:16px;line-height:22px; background-color:#36C6D3; color:#fff; border:1px solid #36C6D3; height:30px; text-align:center; padding:0 15px; width:100px;}
+</style>    
 </head>
 <body  data-type="generalComponents">
     <form id="form1" runat="server">
@@ -165,7 +176,7 @@
                         </a>
                     </li>
                     <li class="tpl-left-nav-item">
-                        <a href="shgl.html" class="nav-link active">
+                        <a href="shlist.aspx" class="nav-link tpl-left-nav-link-list">
                             <i class="am-icon-bar-chart"></i>
                             <span>商户管理</span>
                             <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
@@ -367,7 +378,7 @@
                         </ul>
                     </li>
                     <li class="tpl-left-nav-item">
-                        <a href="zhset.aspx" class="nav-link tpl-left-nav-link-list">
+                        <a href="zhset.aspx" class="nav-link active">
                             <i class="am-icon-table"></i>
                             <span>综合设置</span>
                             <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
@@ -386,104 +397,48 @@
         </div>
 <%--左侧菜单--%>
 <%--右侧内容--%>
-        <div class="tpl-content-wrapper">
-            <div class="tpl-portlet-components">
-                <div class="portlet-title">
+<div class="tpl-content-wrapper">
+ <div class="tpl-portlet-components">
+<div class="portlet-title">
                     <div class="caption font-green bold">
-                        <span class="am-icon-code"></span> 商户列表
-                    </div>
-<div class="am-g" >
-                        <div class="am-u-sm-12 am-u-md-6">
-                         </div>
-                        <div class="am-u-sm-12 am-u-md-3" style="float:right;padding-top:10px;">
-                            <div class="am-form-group">
-                                <select data-am-selected="{btnSize: 'sm'}">
-              <option value="option1">所有类别</option>
-              <option value="option2">IT业界</option>
-              <option value="option3">数码产品</option>
-              <option value="option3">笔记本电脑</option>
-              <option value="option3">平板电脑</option>
-              <option value="option3">只能手机</option>
-              <option value="option3">超极本</option>
-            </select>
-                            </div>
-                        </div>
-                        <div class="am-u-sm-12 am-u-md-3"style="float:right;">
-                            <div class="am-input-group am-input-group-sm">
-                                <input type="text" class="am-form-field">
-                                <span class="am-input-group-btn">
-            <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" type="button"></button>
-          </span>
-                            </div>
-                        </div>
+                        <span class="am-icon-code"></span> 综合设置
                     </div>
                 </div>
-                <div class="tpl-block">
-                    
-                    <div class="am-g">
-                        <div class="am-u-sm-12">
-                            <form class="am-form">
-                                <table class="am-table am-table-striped am-table-hover table-main">
-                                    <thead>
-                                        <tr>
-                                            <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
-                                            <th class="table-id">ID</th>
-                                            <th class="table-title">商户名称</th>
-                                            <th class="table-type">主营项目</th>
-                                            <th class="table-author am-hide-sm-only">时间</th>
-                                            <th class="table-set">操作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-          <asp:Repeater ID="Repeater1" runat ="server" onitemcommand="Repeater1_ItemCommand"><ItemTemplate >
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <td><%#Eval("sid")%></td>
-                                            <td><a href="#"><%#Eval("sanme")%></a></td>
-                                            <td><%#Eval("zynr")%></td>
-                                            <td class="am-hide-sm-only"><%#Eval("time")%></td>
-                                            <td>
-                                                <div class="am-btn-toolbar">
-                                                    <div class="am-btn-group am-btn-group-xs">
-                                                        <a href="shedit.aspx?no=<%=NoIntVal%>" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" style="color:#4693EC; background-color:#fff;"><span class="am-icon-pencil-square-o"></span> 编辑</a>
-                                                        
-                                                    <asp:LinkButton ID="LinkButton3" runat="server" style="text-decoration:none;"><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button></asp:LinkButton>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-          </ItemTemplate></asp:Repeater>
-                                    </tbody>
-                                </table>
-                                <div class="am-cf">
-
-                                    <div class="am-fr" >
-                                        <ul class="am-pagination tpl-pagination">
-                                            <li class="am-disabled"><a href="#">«</a></li>
-                                            <li class="am-active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li><a href="#">»</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <hr>
-
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="tpl-alert"></div>
-            </div>
+        <div style ="width:100%; height:auto; overflow:hidden; ">
+        <table class ="JTable" cellpadding="0" cellspacing="1" align="center" style ="margin-top:10px;"><tbody >
+            <tr class="JTitle">
+            </tr>
+            <tr class="JTr">
+               <td class="LTd" style="font-size:14px;">网站标题：</td>
+               <td class="RTd" style="font-size:14px;">
+                   <asp:TextBox ID="title" style="width:250px; height:30px; margin-bottom:15px;" class="Input_T" runat="server" AutoComplete="off"></asp:TextBox><span style="font-size:14px;color:Red; ">*</span><span style ="color:#666; font-size:12px;">网站名称</span>
+               </td>
+            </tr>
+            <tr class="JTr">
+               <td class="LTd" style="font-size:14px;">关键词：</td>
+               <td class="RTd" style="font-size:14px;">
+                   <asp:TextBox ID="keyci" style="width:600px;height:80px;margin-bottom:15px;" class="Input_T" runat="server" AutoComplete="off" TextMode="MultiLine"></asp:TextBox>
+               </td>
+            </tr>
+            <tr class="JTr">
+               <td class="LTd" style="font-size:14px;">网站描述：</td>
+               <td class="RTd" style="font-size:14px;">
+                   <asp:TextBox ID="miaoshu" style="width:600px;height:160px;" class="Input_T" runat="server" AutoComplete="off" TextMode="MultiLine"></asp:TextBox>
+               </td>
+            </tr>
+            <tr class="JTitle">
+               <td colspan="2" style ="padding-top:5px; padding-bottom:5px; text-indent:340px;">
+                   <asp:Button ID="Button1" class="Button8" runat="server" Text="保存" onclick="Button1_Click" />
+               </td>
+            </tr>
+            
+        </tbody></table>
+        </div></div>
+          </div>
+<%--右侧内容--%>
 
 
-        </div>
 
-    </div>
-    <%--右侧内容--%>
     </form>
 </body>
 </html>

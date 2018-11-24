@@ -32,7 +32,7 @@
                 <img src="assets/img/logo.png" alt=""/>
             </a>
         </div>
-        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right">
+        <div class="am-icon-list tpl-header-nav-hover-ico am-fl am-margin-right"style="float:left;margin-top:30px;">
         </div>
         <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only" data-am-collapse="{target: '#topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span class="am-icon-bars"></span></button>
 
@@ -141,13 +141,13 @@
                         <li><a href="#"><span class="am-icon-power-off"></span> 退出</a></li>
                     </ul>
                 </li>
-                <li><a href="###" class="tpl-header-list-link"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
+                <li><a href="###" class="tpl-header-list-link" style="float:left;margin-top:30px;height:45px;"><span class="am-icon-sign-out tpl-header-list-ico-out-size"></span></a></li>
             </ul>
         </div>
     </header>
     <div class="tpl-page-container tpl-page-header-fixed">
         <div class="tpl-left-nav tpl-left-nav-hover">
-            <div class="tpl-left-nav-title">
+            <div class="tpl-left-nav-title" style="font-size:20px; text-align:center;">
                 总后台管理列表
             </div>
             <div class="tpl-left-nav-list">
@@ -183,7 +183,13 @@
                                             </a></li>
                         </ul>
                     </li>
-                    
+                    <li class="tpl-left-nav-item">
+                        <a href="ddlist.aspx" class="nav-link tpl-left-nav-link-list">
+                            <i class="am-icon-table"></i>
+                            <span>订单管理</span>
+                            <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
+                        </a>
+                    </li>
                     <li class="tpl-left-nav-item"><a href="javascript:;" class="nav-link tpl-left-nav-link-list">
                         <i class="am-icon-cc-visa"></i><span>VIP进制设置</span> <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right">
                         </i></a>

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="shlist.aspx.cs" Inherits="admin_shgl" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="admin_index" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>商户管理</title>
+    <title>美女联盟总后台</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,13 +18,16 @@
     <link rel="stylesheet" href="assets/css/amazeui.min.css" />
     <link rel="stylesheet" href="assets/css/admin.css">
     <link rel="stylesheet" href="assets/css/app.css">
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/amazeui.min.js"></script>
-    <script src="assets/js/app.js"></script>
+    <script src="assets/js/echarts.min.js"></script>
+<style>
+.lsls:hover{color:#fff;}
+.lxlx:hover{color:#fff;}
+
+</style>
 </head>
-<body  data-type="generalComponents">
+<body  data-type="index">
     <form id="form1" runat="server">
-    <%--头部--%>
+<%--头部--%>
     <header class="am-topbar am-topbar-inverse admin-header">
         <div class="am-topbar-brand">
             <a href="javascript:;" class="tpl-logo">
@@ -85,7 +88,6 @@
                                 <span class="tpl-dropdown-content-font"> 为了能最准确的传达所描述的问题， 建议你在反馈时附上演示，方便我们理解。 </span>
                             </a>
                         </li>
-
                     </ul>
                 </li>
                 <li class="am-dropdown" data-am-dropdown data-am-dropdown-toggle>
@@ -147,11 +149,11 @@
             </ul>
         </div>
     </header>
-
 <%--头部--%>
-
 <%--左侧菜单--%>
     <div class="tpl-page-container tpl-page-header-fixed">
+
+
         <div class="tpl-left-nav tpl-left-nav-hover">
             <div class="tpl-left-nav-title">
                 总后台管理列表
@@ -159,13 +161,13 @@
             <div class="tpl-left-nav-list">
                 <ul class="tpl-left-nav-menu">
                     <li class="tpl-left-nav-item">
-                        <a href="index.aspx" class="nav-link tpl-left-nav-link-list">
+                        <a href="index.aspx" class="nav-link active">
                             <i class="am-icon-home"></i>
                             <span>管理首页</span>
                         </a>
                     </li>
                     <li class="tpl-left-nav-item">
-                        <a href="shgl.html" class="nav-link active">
+                        <a href="shlist.aspx" class="nav-link tpl-left-nav-link-list">
                             <i class="am-icon-bar-chart"></i>
                             <span>商户管理</span>
                             <i class="am-icon-angle-right tpl-left-nav-more-ico am-fr am-margin-right"></i>
@@ -387,103 +389,248 @@
 <%--左侧菜单--%>
 <%--右侧内容--%>
         <div class="tpl-content-wrapper">
-            <div class="tpl-portlet-components">
-                <div class="portlet-title">
-                    <div class="caption font-green bold">
-                        <span class="am-icon-code"></span> 商户列表
+            <div class="tpl-content-scope">
+                <div class="note note-info">
+                    <h3>美女联盟  近期通知
+                        <span class="close" data-close="note"></span>
+                    </h3>
+                    <p> 美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟</p>
+                    <p><span class="label label-danger">提示:</span> 美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美女联盟美。
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="width:100%; float:left;">
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+                    <div class="dashboard-stat blue">
+                        <div class="visual">
+                            <i class="am-icon-comments-o"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number"> 49 家 </div>
+                            <div class="desc"> 合作商户 </div>
+                        </div>
+                        <a class="more" href="shlist.aspx"> 查看更多
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
                     </div>
-<div class="am-g" >
-                        <div class="am-u-sm-12 am-u-md-6">
-                         </div>
-                        <div class="am-u-sm-12 am-u-md-3" style="float:right;padding-top:10px;">
-                            <div class="am-form-group">
-                                <select data-am-selected="{btnSize: 'sm'}">
-              <option value="option1">所有类别</option>
-              <option value="option2">IT业界</option>
-              <option value="option3">数码产品</option>
-              <option value="option3">笔记本电脑</option>
-              <option value="option3">平板电脑</option>
-              <option value="option3">只能手机</option>
-              <option value="option3">超极本</option>
-            </select>
+                </div>
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+                    <div class="dashboard-stat red">
+                        <div class="visual">
+                            <i class="am-icon-bar-chart-o"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number"> 1234 人</div>
+                            <div class="desc"> 消费用户 </div>
+                        </div>
+                        <a class="more" href="hylist.aspx"> 查看更多
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
+                    </div>
+                </div>
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+                    <div class="dashboard-stat green">
+                        <div class="visual">
+                            <i class="am-icon-apple"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number"> 653 次</div>
+                            <div class="desc"> 交易次数 </div>
+                        </div>
+                        <a class="more" href="ddlist.aspx"> 查看更多
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
+                    </div>
+                </div>
+                <div class="am-u-lg-3 am-u-md-6 am-u-sm-12">
+                    <div class="dashboard-stat purple">
+                        <div class="visual">
+                            <i class="am-icon-android"></i>
+                        </div>
+                        <div class="details">
+                            <div class="number"> 8786.14 元</div>
+                            <div class="desc"> 交易金额 </div>
+                        </div>
+                        <a class="more" href="#"> 查看更多
+                    <i class="m-icon-swapright m-icon-white"></i>
+                </a>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="row" style="width:100%; float:left;">
+                <div class="am-u-md-6 am-u-sm-12 row-mb" style="width:50%;float: left;">
+                    <div class="tpl-portlet">
+                        <div class="tpl-portlet-title">
+                            <div class="tpl-caption font-green ">
+                                <i class="am-icon-cloud-download"></i>
+                                <span style="font-weight: 600;">月  总交易 数据统计</span>
+                            </div>
+                            <div class="actions">
+                                <ul class="actions-btn">
+                                     <li class="blue"><a href="chart.aspx" class="lsls">查看历史统计</a></li>
+                                </ul>
+                            </div>
+                            <%--统计图插件--%>
+ <div id="container" style="height:400px;width: 100%;float: left;"></div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script>
+       <script type="text/javascript">
+var dom = document.getElementById("container");
+var myChart = echarts.init(dom);
+var app = {};
+option = null;
+option = {
+    xAxis: {
+        type: 'category',
+        boundaryGap: false,
+        data: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [820, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 932, 901, 934, 1290, 1330, 1320, 932, 901, 934, 1290, 1330, 1330, 1320, 932, 901, 934, 1290, 1330, 932],
+        type: 'line',
+        areaStyle: {}
+    }]
+};
+;
+if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
+       </script>
+                           
+                        </div>
+                         <%--统计图插件--%>
+                        <!--此部分数据请在 js文件夹下中的 app.js 中的 “百度图表A” 处修改数据 插件使用的是 百度echarts-->
+<!--                        <div class="tpl-echarts" id="tpl-echarts-A">
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+           
+                <div class="am-u-md-6 am-u-sm-12 row-mb" style="width:40%;float: left;">
+                    <div class="tpl-portlet">
+                        <div class="tpl-portlet-title">
+                            <div class="tpl-caption font-red ">
+                                <i class="am-icon-bar-chart"></i>
+                                <span style="font-weight: 600;"> 当月商户交易排名榜 </span>
+                            </div>
+                            <div class="actions">
+                                <ul class="actions-btn">
+                                    <li class="purple"><a href="shjyb.aspx" class="lxlx" >查看全部排名</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="am-u-sm-12 am-u-md-3"style="float:right;">
-                            <div class="am-input-group am-input-group-sm">
-                                <input type="text" class="am-form-field">
-                                <span class="am-input-group-btn">
-            <button class="am-btn  am-btn-default am-btn-success tpl-am-btn-success am-icon-search" type="button"></button>
-          </span>
-                            </div>
+                        <div class="tpl-scrollable">
+                            <table class="am-table tpl-table">
+                                <thead>
+                                    <tr class="tpl-table-uppercase">
+                                    	<th>排名</th>
+                                        <th>商户</th>
+                                        <th>交易金额</th>
+                                        <th>交易次数</th>                                       
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                    	<td class="font-green bold">1</td>
+                                        <td>
+                                            <img src="assets/img/user01.png" alt="" class="user-pic">
+                                            <a class="user-name" href="###">禁言小张</a>
+                                        </td>
+                                        <td>￥3213</td>
+                                        <td>65</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                    	<td class="font-green bold">2</td>
+                                        <td>
+                                            <img src="assets/img/user02.png" alt="" class="user-pic">
+                                            <a class="user-name" href="###">Alex.</a>
+                                        </td>
+                                        <td>￥2635</td>
+                                        <td>52</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                    	<td class="font-green bold">3</td>
+                                        <td>
+                                            <img src="assets/img/user03.png" alt="" class="user-pic">
+                                            <a class="user-name" href="###">Tinker404</a>
+                                        </td>
+                                        <td>￥1267</td>
+                                        <td>65</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                    	<td class="font-green bold">4</td>
+                                        <td>
+                                            <img src="assets/img/user04.png" alt="" class="user-pic">
+                                            <a class="user-name" href="###">Arron.y</a>
+                                        </td>
+                                        <td>￥657</td>
+                                        <td>65</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                    	<td class="font-green bold">5</td>
+                                        <td>
+                                            <img src="assets/img/user05.png" alt="" class="user-pic">
+                                            <a class="user-name" href="###">Yves</a>
+                                        </td>
+                                        <td>￥3907</td>
+                                        <td>65</td>
+                                        
+                                    </tr>
+                                    <tr>
+                                    	<td class="font-green bold">6</td>
+                                        <td>
+                                            <img src="assets/img/user06.png" alt="" class="user-pic">
+                                            <a class="user-name" href="###">小黄鸡</a>
+                                        </td>
+                                        <td>￥900</td>
+                                        <td>65</td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
-                <div class="tpl-block">
-                    
-                    <div class="am-g">
-                        <div class="am-u-sm-12">
-                            <form class="am-form">
-                                <table class="am-table am-table-striped am-table-hover table-main">
-                                    <thead>
-                                        <tr>
-                                            <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
-                                            <th class="table-id">ID</th>
-                                            <th class="table-title">商户名称</th>
-                                            <th class="table-type">主营项目</th>
-                                            <th class="table-author am-hide-sm-only">时间</th>
-                                            <th class="table-set">操作</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-          <asp:Repeater ID="Repeater1" runat ="server" onitemcommand="Repeater1_ItemCommand"><ItemTemplate >
-                                        <tr>
-                                            <td><input type="checkbox"></td>
-                                            <td><%#Eval("sid")%></td>
-                                            <td><a href="#"><%#Eval("sanme")%></a></td>
-                                            <td><%#Eval("zynr")%></td>
-                                            <td class="am-hide-sm-only"><%#Eval("time")%></td>
-                                            <td>
-                                                <div class="am-btn-toolbar">
-                                                    <div class="am-btn-group am-btn-group-xs">
-                                                        <a href="shedit.aspx?no=<%=NoIntVal%>" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" style="color:#4693EC; background-color:#fff;"><span class="am-icon-pencil-square-o"></span> 编辑</a>
-                                                        
-                                                    <asp:LinkButton ID="LinkButton3" runat="server" style="text-decoration:none;"><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button></asp:LinkButton>
-                                                    </div>
-                                                </div>
-                                            </td>
-                                        </tr>
-          </ItemTemplate></asp:Repeater>
-                                    </tbody>
-                                </table>
-                                <div class="am-cf">
-
-                                    <div class="am-fr" >
-                                        <ul class="am-pagination tpl-pagination">
-                                            <li class="am-disabled"><a href="#">«</a></li>
-                                            <li class="am-active"><a href="#">1</a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#">5</a></li>
-                                            <li><a href="#">»</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <hr>
-
-                            </form>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="tpl-alert"></div>
             </div>
 
 
-        </div>
+         </div>
 
     </div>
-    <%--右侧内容--%>
-    </form>
+<%--右侧内容--%>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/amazeui.min.js"></script>
+    <script src="assets/js/iscroll.js"></script>
+    <script src="assets/js/app.js"></script>    </form>
 </body>
 </html>
