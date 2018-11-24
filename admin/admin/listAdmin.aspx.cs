@@ -15,7 +15,7 @@ using System.Text.RegularExpressions;
 using System.Xml.Linq;
 using System.IO;
 
-public partial class admin_listAdmin : System.Web.UI.Page
+public partial class admin_admin_listAdmin : System.Web.UI.Page
 {
     public DataSet chaxun = new DataSet();
     public string id, name, realname, tel;
@@ -35,6 +35,7 @@ public partial class admin_listAdmin : System.Web.UI.Page
             delBtn3.Attributes.Add("onClick", "if (!window.confirm('您确定要删除这条数据吗？')){return false;}else{}");
             delBtn3.CommandArgument = ((int)ds.Tables[0].Rows[listItem.ItemIndex]["id"]).ToString();
         }
+
     }
     protected void Repeater1_ItemCommand(object source, RepeaterCommandEventArgs e)
     {
@@ -73,8 +74,6 @@ public partial class admin_listAdmin : System.Web.UI.Page
             }
 
             #endregion
-
         }
     }
-
 }
