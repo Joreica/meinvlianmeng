@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/admin/MasterPage.master" AutoEventWireup="true" CodeFile="z-shlist.aspx.cs" Inherits="admin_z_shlist" Title="商户列表" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/admin/MasterPage.master" AutoEventWireup="true" CodeFile="z-hdlist.aspx.cs" Inherits="admin_z_hdlist" Title="活动列表" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>
@@ -8,7 +8,7 @@
             <div class="tpl-portlet-components">
                 <div class="portlet-title">
                     <div class="caption font-green bold">
-                        <span class="am-icon-code"></span> 商户列表
+                        <span class="am-icon-code"></span> 活动列表
                     </div>
 <div class="am-g" >
                         <div class="am-u-sm-12 am-u-md-6">
@@ -53,32 +53,33 @@
                                     <thead>
                                         <tr>
                                             <th class="table-check"><input type="checkbox" class="tpl-table-fz-check"></th>
-                                            <th class="table-id">ID</th>
-                                            <th class="table-title">商户名称</th>
-                                            <th class="table-type">主营项目</th>
-                                            <th class="table-author am-hide-sm-only">时间</th>
-                                            <th class="table-set">操作</th>
+                                            <th class="table-id"style="text-align:center;">ID</th>
+                                            <th class="table-title"style="text-align:center;">活动名称</th>
+                                            <th class="table-type"style="text-align:center;">活动商家</th>
+                                            <th class="table-type"style="text-align:center;">套餐内容</th>
+                                            <th class="table-author am-hide-sm-only"  colspan="2"  style="text-align:center;">起止时间</th>
+                                            <th class="table-set"style="text-align:center;">操作</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-          <asp:Repeater ID="Repeater1" runat ="server" onitemcommand="Repeater1_ItemCommand"><ItemTemplate >
                                         <tr>
                                             <td><input type="checkbox"></td>
-                                            <td><%#Eval("sid")%></td>
-                                            <td><a href="#"><%#Eval("sanme")%></a></td>
-                                            <td><%#Eval("zynr")%></td>
-                                            <td class="am-hide-sm-only"><%#Eval("time")%></td>
-                                            <td>
+                                            <td style="text-align:center;">1</td>
+                                            <td style="text-align:center;"><a href="#">aaa</a></td>
+                                            <td style="text-align:center;">eee</td>
+                                            <td style="text-align:center;">ttt</td>
+                                            <td class="am-hide-sm-only" style="text-align:center;width:120px;">111</td>
+                                            <td class="am-hide-sm-only" style="text-align:center;width:120px;">222</td>
+                                            <td style="width:140px;">
                                                 <div class="am-btn-toolbar">
                                                     <div class="am-btn-group am-btn-group-xs">
-                                                        <a href="z-shedit.aspx?no=<%=NoIntVal%>" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" style="color:#4693EC; background-color:#fff;"><span class="am-icon-pencil-square-o"></span> 编辑</a>
+                                                        <a href="z-shedit.aspx" class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only" style="color:#4693EC; background-color:#fff;"><span class="am-icon-pencil-square-o"></span> 编辑</a>
                                                         
                                                     <asp:LinkButton ID="LinkButton3" runat="server" style="text-decoration:none;"><button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button></asp:LinkButton>
                                                     </div>
                                                 </div>
                                             </td>
                                         </tr>
-          </ItemTemplate></asp:Repeater>
                                     </tbody>
                                 </table>
                                 <div class="am-cf">
@@ -109,6 +110,5 @@
         </div>
 
     </div>
-    <%--右侧内容--%>
-</asp:Content>
+    <%--右侧内容--%></asp:Content>
 
